@@ -1,6 +1,7 @@
 <script setup>
 import { useTaskStore } from './stores/TaskStore';
 import TaskDetails from '@/components/TaskDetail.vue';
+import Form from '@/components/Form.vue';
 import {ref} from 'vue'
 
 const taskStore = useTaskStore()
@@ -11,12 +12,19 @@ const filter = ref('all');
 
 <template>
   <div class="max-w-7xl mx-auto mt-4 border rounded-lg px-12 py-8">
-      <header class="flex justify-center items-center gap-3 bg-gray-100 p-2 rounded-lg">
-        <div class="w-16">
-          <img class="w-full h-full" src="https://seeklogo.com/images/P/pinia-logo-51BF712FB0-seeklogo.com.png" alt="image">
+      <header class=" bg-gray-100 p-2 rounded-lg">
+        <div class="flex justify-center items-center gap-3">
+          <div class="w-16">
+            <img class="w-full h-full" src="https://seeklogo.com/images/P/pinia-logo-51BF712FB0-seeklogo.com.png" alt="image">
+          </div>
+          <div>
+            <h1 class="text-xl font-light  text-green-600 mt-14">State Mangement Using Pinia</h1>
+          </div>
         </div>
-        <div>
-          <h1 class="text-xl font-light  text-green-600 mt-14">State Mangement Using Pinia</h1>
+        
+
+        <div class="flex justify-center my-8">
+          <Form class="!block"/>
         </div>
       </header>
 
