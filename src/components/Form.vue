@@ -25,6 +25,7 @@ const submit = () =>{
             <div>
                 <input type="text" v-model="addTask" class="border h-9 w-[300px] rounded-md text-gray-500 font-extralight px-3 py-2">
                 <button type="button" @click="submit" class="text-thin text-green-600 border border-green-600 px-3 py-1 rounded-md ml-3 hover:text-white hover:bg-green-600">Add task</button>
+                <button type="button" @click="taskStore.$reset" class="text-thin text-red-600 border border-red-600 px-3 py-1 rounded-md ml-3 hover:text-white hover:bg-red-600">Reset</button>
             </div>
         </form>
     </div>
